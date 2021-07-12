@@ -1,0 +1,56 @@
+@import "../../assets/scss/main.scss";
+
+.body {
+  height: 100vh;
+  flex: 0 0 17.5%;
+  border-right: 1px solid rgba($color-text-light, .5);
+  padding: 3.5rem 2rem 0 5.5rem;
+
+  button,
+  .share {
+    @include flex-start;
+    width: 98%;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem 0;
+    svg {
+      margin-right: 1.3rem;
+    }
+  }
+
+  .share {
+    color: $color-dark;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.header {
+  @include flex-start;
+  margin-bottom: 4rem;
+  svg {
+    width: 2.7rem;
+    height: 2.7rem;
+    fill: $color-primary;
+  }
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    color: $color-primary;
+    margin-left: 0.54rem;
+  }
+}
+
+.home {
+  margin: 0 !important;
+  border-color: $color-text-light !important;
+  svg {
+    fill: $color-primary;
+  }
+  span {
+    font-weight: 700;
+    color: $color-dark;
+  }
+}

@@ -1,0 +1,80 @@
+
+@import '../assets/scss/main.scss';
+    
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  color: $color-text;
+}
+/* ::selection {
+   background:rgba(252, 229, 55, 0.72);
+ } */
+
+html {
+  ///// MIN WIDTH RULES GOES IN ASCENDING ORDER //////
+  @include responsive(1600px) {
+    font-size: 93.75%;
+  }
+  @include responsive(1800px) {
+    font-size: 100%;
+  }
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+li {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+textarea {
+  cursor: text;
+}
+
+
+
+.App {
+  @include flex-between;
+  svg {
+    width: 1.64rem;
+    height: 1.64rem;
+    fill: $color-svg;
+  }
+}
+
+
+.main {
+height: 100vh;
+flex: 0 0 80%;
+border: 1px solid red;
+}
