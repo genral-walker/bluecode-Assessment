@@ -167,3 +167,20 @@ textarea {
     }
   }
 }
+
+
+
+
+.selects {
+  @include flex-between;
+  justify-content: space-evenly;
+  margin: 3rem 0;
+  box-shadow: 2px 2px 8px rgba($color-text-light, 0.7);
+  div {
+    width: min-content;
+    padding: 1rem 1rem 1rem 1.5rem ;
+    &:not(:last-of-type) {
+      border-right: 1px solid rgba($color-text-light, 0.7);
+    }
+  }
+}

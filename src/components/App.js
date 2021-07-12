@@ -26,7 +26,7 @@ const App = () => {
           </form>
 
           <div className='notifications'>
-            <span onClick={()=> toggleState()}>
+            <span onClick={() => toggleState()}>
               <Bell />
               <p>3</p>
             </span>
@@ -43,6 +43,66 @@ const App = () => {
 
           {state && <ChatBox />}
         </nav>
+
+        <div className='selects'>
+
+          <div>
+            <select>
+              <option>World</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+          <div>
+            <select>
+              <option>Following</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+          <div>
+            <select>
+              <option>Popular</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+          <div>
+            <select>
+              <option>Post</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+          <div>
+            <select>
+              <option>Gender</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+          <div>
+            <select>
+              <option>Location</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+          <div>
+            <select>
+              <option>Profession</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+          <div>
+            <select>
+              <option>Career</option>
+              <option>Gender</option>
+            </select>
+          </div>
+
+        </div>
 
       </main>
     </div>
