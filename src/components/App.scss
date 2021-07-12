@@ -76,7 +76,10 @@ textarea {
 }
 
 .main-nav {
+  border: 1px solid red;
+  position: relative;
   @include flex-between;
+
   .search-box {
     @include flex-between;
     flex: 0 0 77%;
@@ -147,7 +150,8 @@ textarea {
       height: 4rem;
       width: 4rem;
       border-radius: 100%;
-      background: red;
+      background:url(../assets/images/man.png) center;
+      background-size: cover;
       position: relative;
       left: 18px;
 
