@@ -87,12 +87,13 @@ textarea {
   width: 85.5%;
   padding: 3rem 4rem 4rem 2.5rem;
   overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
   @include responsive(800px) {
     padding: 3rem 2.5rem 4rem;
   }
   @include responsive(600px) {
     width: 100% !important;
-    overflow-x: hidden;
   }
 }
 
@@ -119,7 +120,7 @@ textarea {
       flex: 0 0 63%;
     }
     @include responsive(800px) {
-      flex: 0 0 55%;
+      // flex: 0 0 55%;
     }
 
     svg {
@@ -168,20 +169,21 @@ textarea {
       flex: 0 0 27%;
     }
     @include responsive(900px) {
-      flex: 0 0 31%;
+      flex: 0 0 32%;
     }
+
     @include responsive(768px) {
+      flex: 0 0 42%;
+    }
+    @include responsive(650px) {
       flex: 0 0 47%;
     }
-    @include responsive(425px) {
-      flex: 0 0 53%;
+    @include responsive(550px) {
+      // flex: 0 0 57%;
     }
-    @include responsive(375px) {
-      flex: 0 0 57%;
-    }
-    @include responsive(350px) {
-      flex: 0 0 60%;
-    }
+    // @include responsive(350px) {
+    //   flex: 0 0 60%;
+    // }
 
 
     span {
@@ -274,4 +276,25 @@ textarea {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2.5rem;
+  @include responsive(1100px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include responsive(1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include responsive(768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include responsive(550px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(375px) {
+    gap: 1.5rem;
+  }
+  @include responsive(330px) {
+    grid-template-columns: 1fr;
+  }
 }

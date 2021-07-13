@@ -10,7 +10,6 @@
   overflow: hidden;
   box-shadow: 4px 4px 10px rgba($color-text-light, 0.9);
   cursor: pointer;
-  
 
   @include responsive(hover) {
     div:last-of-type {
@@ -26,7 +25,6 @@
     color: $color-white;
     fill: $color-white;
   }
-
 
 
 
@@ -52,29 +50,48 @@
       height: 1rem;
     }
 
+
+
     &:first-of-type {
       bottom: 0;
+      @include responsive(noHover) {
+        display: none;
+      }
     }
+
+
 
     &:last-of-type {
       bottom: 0;
       background: $color-white;
       padding: 1rem 1.5rem 13px;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: 0.7s;
+      @include responsive(noHover) {
+        background: none;
+        opacity: 1;
+        transform: translateY(0);
+      }
       & * {
         color: $color-primary;
         fill: $color-primary;
         font-weight: 700;
+        @include responsive(noHover) {
+            color: $color-white;
+            fill: $color-white;
+            font-weight: 600;
+          }
       }
-      transform: translateY(100%);
-      opacity: 0;
-      transition: 0.7s;
+
+      
 
       span {
         @include flex-between;
         margin-top: 1rem;
 
         button {
-            @include flex-center;
+          @include flex-center;
           & * {
             fill: $color-white !important;
             width: 1.2rem !important;
