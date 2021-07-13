@@ -11,10 +11,12 @@ import Catalogue from './Catalogue/Catalogue';
 const App = () => {
 
   const [state, setstate] = useState(false);
+  const [sideNav, setSideNav] = useState(false);
 
   return (
     <div className="App">
-      <Navigation />
+      <div className={sideNav ? 'darken show' : 'darken'} onClick={() => setSideNav(prev => !prev)}></div>
+      <Navigation isNavShown={sideNav} />
 
       <main className='main'>
 
@@ -40,6 +42,8 @@ const App = () => {
               <option>Micheal</option>
             </select>
           </div>
+
+          <span onClick={() => setSideNav(prev => !prev)}></span>
 
           {state && <ChatBox />}
         </nav>

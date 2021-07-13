@@ -3,8 +3,66 @@
 .body {
   height: 100vh;
   width: 17.5%;
-  border-right: 1px solid rgba($color-text-light, .5);
+  border-right: 1px solid rgba($color-text-light, 0.5);
   padding: 3.5rem 2rem 0 5.5rem;
+  transition: transform .6s;
+
+  @include responsive(1200px) {
+    padding: 3.5rem 2rem 0 3rem;
+  }
+  @include responsive(1100px) {
+    width: 18.5%;
+    padding: 3.5rem 2rem 0 2.5rem;
+  }
+  @include responsive(1024px) {
+    width: 20%;
+  }
+  @include responsive(900px) {
+    width: 23%;
+  }
+  @include responsive(800px) {
+    width: 27%;
+  }
+  @include responsive(700px) {
+    width: 29%;
+  }
+  @include responsive(650px) {
+    width: 31%;
+  }
+  @include responsive(600px) {
+    transform: translateX(-105%);
+    width: 35%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $color-white;
+    z-index: 50;
+  }
+  @include responsive(550px) {
+    width: 37%;
+  }
+  @include responsive(500px) {
+    width: 40%;
+  }
+  @include responsive(480px) {
+    width: 44%;
+  }
+  @include responsive(425px) {
+    width: 48%;
+  }
+  @include responsive(400px) {
+    width: 52%;
+  }
+  @include responsive(360px) {
+    width: 53%;
+    padding: 3.5rem 1.5rem 0;
+  }
+  @include responsive(330px) {
+    width: 55%;
+  }
+  @include responsive(330px) {
+    width: 57%;
+  }
 
   button,
   .share {

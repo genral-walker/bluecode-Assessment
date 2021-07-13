@@ -10,6 +10,7 @@
   overflow: hidden;
   box-shadow: 4px 4px 10px rgba($color-text-light, 0.9);
   cursor: pointer;
+  
 
   @include responsive(hover) {
     div:last-of-type {

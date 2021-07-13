@@ -13,10 +13,10 @@ import { ReactComponent as Parade } from '../../assets/svgs/parade.svg';
 import { ReactComponent as Group } from '../../assets/svgs/group.svg';
 
 
-const Navigation = () => {
+const Navigation = ({isNavShown}) => {
 
     return (
-        <aside className={styles.body}>
+        <aside className={styles.body} style={isNavShown ? {transform: 'translateX(0)'} : {}}>
             <div className={styles.header}>
                 <Cube />
                 <h1>bluecube</h1>

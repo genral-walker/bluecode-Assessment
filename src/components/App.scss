@@ -68,18 +68,38 @@ textarea {
     fill: $color-svg;
   }
 }
+.darken {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.322);
+  z-index: 49;
+  visibility: hidden;
+  &.show {
+    visibility: visible;
+  }
+}
 
 .main {
   height: 100vh;
   width: 85.5%;
-  padding: 3rem 4rem 3rem 2.5rem;
+  padding: 3rem 4rem 4rem 2.5rem;
   overflow-y: auto;
+  @include responsive(800px) {
+    padding: 3rem 2.5rem 4rem;
+  }
+  @include responsive(600px) {
+    width: 100% !important;
+    overflow-x: hidden;
+  }
 }
 
 .main-nav {
+  width: 100%;
   position: relative;
   @include flex-between;
-
 
   .search-box {
     @include flex-between;
@@ -88,6 +108,19 @@ textarea {
     border-radius: 6px;
     box-shadow: 4px 2px 4px rgba($color-text-light, 0.3);
     padding: 0 1.2rem 0 3rem;
+
+    @include responsive(1200px) {
+      flex: 0 0 75%;
+    }
+    @include responsive(1100px) {
+      flex: 0 0 70%;
+    }
+    @include responsive(1024px) {
+      flex: 0 0 63%;
+    }
+    @include responsive(800px) {
+      flex: 0 0 55%;
+    }
 
     svg {
       height: 2.2rem;
@@ -119,6 +152,38 @@ textarea {
   .notifications {
     flex: 0 0 18%;
     @include flex-between;
+    @include responsive(1280px) {
+      flex: 0 0 19%;
+    }
+    @include responsive(1200px) {
+      flex: 0 0 20%;
+    }
+    @include responsive(1100px) {
+      flex: 0 0 22%;
+    }
+    @include responsive(1024px) {
+      flex: 0 0 25%;
+    }
+    @include responsive(950px) {
+      flex: 0 0 27%;
+    }
+    @include responsive(900px) {
+      flex: 0 0 31%;
+    }
+    @include responsive(768px) {
+      flex: 0 0 47%;
+    }
+    @include responsive(425px) {
+      flex: 0 0 53%;
+    }
+    @include responsive(375px) {
+      flex: 0 0 57%;
+    }
+    @include responsive(350px) {
+      flex: 0 0 60%;
+    }
+
+
     span {
       position: relative;
       cursor: pointer;
@@ -147,7 +212,7 @@ textarea {
       height: 4rem;
       width: 4rem;
       border-radius: 100%;
-      background:url(../assets/images/man.png) center;
+      background: url(../assets/images/man.png) center;
       background-size: cover;
       position: relative;
       left: 18px;
@@ -163,24 +228,47 @@ textarea {
       }
     }
   }
+
+  & > span {
+    width: 20px;
+    height: 2px;
+    background: $color-svg;
+    position: relative;
+    display: none;
+    @include responsive(600px) {
+      display: unset;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      background: inherit;
+      width: inherit;
+      height: inherit;
+    }
+    &::before {
+      top: -6px;
+    }
+    &::after {
+      top: 6px;
+    }
+  }
 }
-
-
 
 .selects {
   @include flex-between;
+  width: 100% !important;
   margin: 3rem 0;
   box-shadow: 2px 2px 8px rgba($color-text-light, 0.7);
   div {
     width: min-content;
-    padding: 1rem 1rem 1rem 1.5rem ;
+    padding: 1rem 1rem 1rem 1.5rem;
     &:not(:last-of-type) {
       border-right: 1px solid rgba($color-text-light, 0.7);
     }
   }
 }
-
-
 
 .catalogue {
   display: grid;
