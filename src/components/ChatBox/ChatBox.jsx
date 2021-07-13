@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './ChatBox.module.scss';
 import { ReactComponent as Heart } from '../../assets/svgs/heart.svg';
+import { ReactComponent as Chat } from '../../assets/svgs/chat.svg';
 import pix from '../../assets/images/man.png';
 
 const ChatBox = () => {
@@ -31,7 +32,7 @@ const ChatBox = () => {
 
                 <p>Micheal liked you! <br /> About 20 minutes ago</p>
 
-                <Heart style={{ fill: '#382ea0' }} />
+                <Chat style={{ fill: '#382ea0' }} />
             </div>
         </div>
     )

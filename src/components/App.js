@@ -5,12 +5,12 @@ import Navigation from './Navigation/Navigation';
 import { ReactComponent as Search } from '../assets/svgs/search.svg';
 import { ReactComponent as Bell } from '../assets/svgs/bell.svg';
 import ChatBox from './ChatBox/ChatBox';
+import Catalogue from './Catalogue/Catalogue';
+
 
 const App = () => {
 
   const [state, setstate] = useState(false);
-
-  const toggleState = () => setstate(prev => !prev);
 
   return (
     <div className="App">
@@ -26,7 +26,7 @@ const App = () => {
           </form>
 
           <div className='notifications'>
-            <span onClick={() => toggleState()}>
+            <span onClick={() => setstate(prev => !prev)}>
               <Bell />
               <p>3</p>
             </span>
@@ -103,6 +103,34 @@ const App = () => {
           </div>
 
         </div>
+
+        <section className='catalogue'>
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+          <Catalogue />
+        </section>
 
       </main>
     </div>
