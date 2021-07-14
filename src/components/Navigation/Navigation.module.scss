@@ -72,6 +72,9 @@
     border-radius: 6px;
     padding: 1rem 1.5rem;
     margin: 0.5rem 0;
+    @include responsive(500px) {
+      padding: .8rem 1.5rem;
+    }
     svg {
       margin-right: 1.3rem;
     }
@@ -88,6 +91,9 @@
 .header {
   @include flex-start;
   margin-bottom: 4rem;
+  @include responsive(500px) {
+    margin-bottom: 2rem;
+  }
   svg {
     width: 2.7rem;
     height: 2.7rem;
@@ -98,6 +104,33 @@
     letter-spacing: 0.5px;
     color: $color-primary;
     margin-left: 0.54rem;
+  }
+}
+
+.profile {
+  display: none;
+  @include responsive(500px) {
+  @include flex-start;
+  }
+  div {
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background: url(../../assets/images/man.png) center;
+    background-size: cover;
+    position: relative;
+    margin: .5rem .8rem 1.7rem .5rem;
+
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 1px;
+      height: 1rem;
+      width: 1rem;
+      background: $color-green;
+      border-radius: 100%;
+    }
   }
 }
 

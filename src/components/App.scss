@@ -98,11 +98,12 @@ textarea {
 }
 
 .main-nav {
-  width: 100%;
+  overflow-x: inherit;
   position: relative;
   @include flex-between;
 
   .search-box {
+    border: 1px solid rgb(252, 135, 10) !important;
     @include flex-between;
     flex: 0 0 77%;
     border: 1px solid rgba($color-text-light, 0.3);
@@ -119,14 +120,25 @@ textarea {
     @include responsive(1024px) {
       flex: 0 0 63%;
     }
-    @include responsive(800px) {
-      // flex: 0 0 55%;
+    @include responsive(768px) {
+      padding: 0 1.2rem;
+      flex: 0 0 53%;
     }
+    @include responsive(500px) {
+      padding: 0 .8rem;
+      flex: 0 0 75%;
+    }
+    
 
     svg {
       height: 2.2rem;
       width: 2.2rem;
       margin-right: 2rem;
+      @include responsive(768px) {
+        width: 30px;
+        height: 30px;
+        margin-right: 1.5rem;
+      }
     }
 
     input {
@@ -137,6 +149,12 @@ textarea {
       &::placeholder {
         color: inherit;
         font-size: inherit;
+        @include responsive(350px) {
+         font-size: 1.2rem;
+        }
+      }
+      @include responsive(500px) {
+        height: 4rem;
       }
     }
 
@@ -147,6 +165,9 @@ textarea {
       padding: 0.9rem 2.5rem;
       font-size: 1.1rem;
       border-radius: 5px;
+      @include responsive(500px) {
+        padding: 0.9rem 1.5rem;
+      }
     }
   }
 
@@ -171,19 +192,11 @@ textarea {
     @include responsive(900px) {
       flex: 0 0 32%;
     }
-
     @include responsive(768px) {
-      flex: 0 0 42%;
+      flex: 0 0 35%;
+    }@include responsive(500px) {
+      flex: 0 0 auto;
     }
-    @include responsive(650px) {
-      flex: 0 0 47%;
-    }
-    @include responsive(550px) {
-      // flex: 0 0 57%;
-    }
-    // @include responsive(350px) {
-    //   flex: 0 0 60%;
-    // }
 
 
     span {
@@ -218,6 +231,10 @@ textarea {
       background-size: cover;
       position: relative;
       left: 18px;
+      @include responsive(550px) {
+        left: 12px;
+      }
+      
 
       span {
         position: absolute;
@@ -229,6 +246,11 @@ textarea {
         border-radius: 100%;
       }
     }
+    .profile, select {
+      @include responsive(500px) {
+        display: none;
+      }
+    }
   }
 
   & > span {
@@ -237,9 +259,6 @@ textarea {
     background: $color-svg;
     position: relative;
     display: none;
-    @include responsive(600px) {
-      display: unset;
-    }
     &::before,
     &::after {
       position: absolute;
@@ -255,12 +274,18 @@ textarea {
     &::after {
       top: 6px;
     }
+    @include responsive(600px) {
+      display: unset;
+    }
+    @include responsive(400px) {
+      width: 16px;
+    }
   }
 }
 
 .selects {
   @include flex-between;
-  width: 100% !important;
+  overflow-x: auto;
   margin: 3rem 0;
   box-shadow: 2px 2px 8px rgba($color-text-light, 0.7);
   div {
