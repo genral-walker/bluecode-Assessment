@@ -3,12 +3,16 @@
 .body {
   background: $color-white;
   border-radius: 4px;
-  padding: .3rem 2.5rem 1.5rem;
+  padding: 0.3rem 2.5rem 1.5rem;
   box-shadow: 2px 2px 8px rgba($color-text-light, 0.7);
   position: absolute;
-  top: 120%;
-  right: 0;
+  top: 17%;
+  right: 5%;
   z-index: 100000;
+  @include responsive(500px) {
+    top: 15%;
+    right: 5%;
+  }
 
   .arrow {
     position: absolute;
@@ -23,8 +27,8 @@
     @include flex-between;
     padding-top: 1.2rem;
     &:not(:last-of-type) {
-        border-bottom: 1px solid rgba($color-text-light, 0.7);
-        padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba($color-text-light, 0.7);
+      padding-bottom: 1.2rem;
     }
     img {
       height: 2.5rem;

@@ -12,7 +12,7 @@ const ChatBox = () => {
             <div className={styles.arrow}></div>
 
             <div className={styles.chat}>
-                <img src={pix} />
+                <img src={pix} alt='Alert Notification' />
 
                 <p>Micheal liked you! <br /> About 20 minutes ago</p>
 
@@ -20,7 +20,7 @@ const ChatBox = () => {
             </div>
 
             <div className={styles.chat}>
-                <img src={pix} />
+                <img src={pix} alt='Alert Notification' />
 
                 <p>Micheal liked you! <br /> About 20 minutes ago</p>
 
@@ -28,7 +28,7 @@ const ChatBox = () => {
             </div>
 
             <div className={styles.chat}>
-                <img src={pix} />
+                <img src={pix} alt='Alert Notification' />
 
                 <p>Micheal liked you! <br /> About 20 minutes ago</p>
 

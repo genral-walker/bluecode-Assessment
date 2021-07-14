@@ -91,8 +91,8 @@
 .header {
   @include flex-start;
   margin-bottom: 4rem;
-  @include responsive(500px) {
-    margin-bottom: 2rem;
+  @include responsive(720px) {
+    margin-bottom: 2.3rem;
   }
   svg {
     width: 2.7rem;
@@ -109,7 +109,7 @@
 
 .profile {
   display: none;
-  @include responsive(500px) {
+  @include responsive(720px) {
   @include flex-start;
   }
   div {
